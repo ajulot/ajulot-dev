@@ -32,7 +32,7 @@ targets:
       host: http://127.0.0.1:7073
     variables:
       catalog: workspace
-      schema: ajulot
+      schema: default
   prod:
     mode: production
     workspace:
