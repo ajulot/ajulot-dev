@@ -1,0 +1,14 @@
+resources:
+  pipelines:
+    pipelines_with_cdc_tutorial:
+      name: Pipelines with CDC Tutorial
+      libraries:
+        - glob:
+            include: ../src/transformations/**
+      catalog: workspace
+      channel: CURRENT
+      continuous: false
+      photon: true
+      root_path: ../src
+      schema: default
+      serverless: true

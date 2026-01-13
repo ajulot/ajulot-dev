@@ -1,0 +1,27 @@
+resources:
+  jobs:
+    pipelines_with_cdc_tutorial_jb:
+      name: Pipelines with CDC Tutorial_JB
+      tasks:
+        - task_key: pipeline-task-734bc1be-d58a-4b5b-808d-518c8ae1b4ae
+          email_notifications: {}
+          pipeline_task:
+            full_refresh: false
+            pipeline_id: 734bc1be-d58a-4b5b-808d-518c8ae1b4ae
+          run_if: ALL_SUCCESS
+          timeout_seconds: 0
+          webhook_notifications: {}
+      email_notifications:
+        no_alert_for_skipped_runs: true
+        on_failure:
+          - ajulot@gmail.com
+      max_concurrent_runs: 1
+      notification_settings:
+        no_alert_for_skipped_runs: true
+      performance_target: PERFORMANCE_OPTIMIZED
+      schedule:
+        pause_status: PAUSED
+        quartz_cron_expression: 25 4 19 * * ?
+        timezone_id: America/Chicago
+      timeout_seconds: 0
+      webhook_notifications: {}
